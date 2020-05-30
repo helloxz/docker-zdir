@@ -37,3 +37,9 @@ chown -R www:www /data/wwwroot/default/
 cp zdir/config.simple.php zdir/config.php
 #替换路径
 sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
+#下载不需要的软件，减小体积
+apk del unzip wget
+
+echo '----------------------------------------------'
+echo 'Install Success.'
+echo '----------------------------------------------'
