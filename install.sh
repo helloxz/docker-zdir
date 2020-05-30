@@ -14,7 +14,7 @@ date
 apk del tzdata
 
 #安装依赖
-apk add unzip wget
+apk add unzip wget caddy
 #安装PHP
 apk add php7 php7-fpm php7-openssl php7-sqlite3 php7-curl php7-fileinfo php7-mbstring php7-iconv php7-zip php7-json php7-session
 
@@ -33,6 +33,7 @@ wget -O /data/wwwroot/default/zdir.zip https://github.com/helloxz/zdir/archive/m
 cd /data/wwwroot/default/
 unzip zdir.zip
 mv zdir-master zdir
+rm -rf zdir.zip
 #创建用户和用户组
 addgroup -S www && adduser -S www -G www
 chown -R www:www /data/wwwroot/default/
