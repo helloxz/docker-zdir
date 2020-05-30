@@ -4,8 +4,6 @@ WORKDIR /root
 #复制启动文件
 COPY ./run.sh /usr/sbin
 RUN wget https://raw.githubusercontent.com/helloxz/docker-zdir/master/install.sh && sh install.sh
-#指定用户
-USER www:www
 # 复制caddy配置文件
 COPY ./host.conf /etc/caddy/
 # 复制php.ini
