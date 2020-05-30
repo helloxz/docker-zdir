@@ -26,6 +26,8 @@ mv /etc/php7/php.ini /etc/php7/php.ini.bak
 #启动脚本赋予权限
 chmod +x /usr/sbin/run.sh
 
+#创建目录
+mkdir -p /data/wwwroot/default
 #下载Zdir
 wget -O /data/wwwroot/default/zdir.zip https://github.com/helloxz/zdir/archive/master.zip
 cd /data/wwwroot/default/
