@@ -64,7 +64,7 @@ function install_zdir(){
 	#进入目录
 	cd $zdir_path
 	unzip -o zdir.zip
-	mv zdir-master/* zdir
+	mv zdir-master zdir
 	rm -rf zdir-master
 	#重命名配置文件
 	mv config.simple.php config.php
