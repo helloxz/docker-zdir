@@ -67,7 +67,7 @@ function install_zdir(){
 	mv zdir-master zdir
 	rm -rf zdir-master
 	#重命名配置文件
-	mv config.simple.php config.php
+	mv zdir/config.simple.php zdir/config.php
 	#设置读取的路径
 	sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
 	echo '-------------------------------------------'
