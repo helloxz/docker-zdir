@@ -51,11 +51,11 @@ function ready(){
 #安装Zdir
 function install_zdir(){
 	echo '-------------------------------------------'
-	read -p "请输入Zdir安装目录（如果留空，则默认为/data/wwwroot/zdir）:" zdir_path
+	read -p "请输入Zdir安装目录（如果留空，则默认为/data/wwwroot/default）:" zdir_path
 	#如果路径为空
 	if [ -z "${zdir_path}" ]
 	then
-		zdir_path='/data/wwwroot/zdir'
+		zdir_path='/data/wwwroot/default'
 	fi
 	#创建目录
 	mkdir -p $zdir_path
@@ -64,10 +64,12 @@ function install_zdir(){
 	#进入目录
 	cd $zdir_path
 	unzip -o zdir.zip
-	mv zdir-master/* ./
+	mv zdir-master/* zdir
 	rm -rf zdir-master
 	#重命名配置文件
 	mv config.simple.php config.php
+	#设置读取的路径
+	sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
 	echo '-------------------------------------------'
 	#设置文件管理器密码
 	read -p "请设置文件管理器密码:" zdir_pass
