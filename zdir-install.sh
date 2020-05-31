@@ -1,6 +1,6 @@
 #!/bin/bash
 #####		Docker for Zdir一键安装脚本		#####
-#####		Update:2020-05-05				#####
+#####		Update:2020-05-31				#####
 #####		Author:xiaoz					#####
 
 #导入环境变量
@@ -79,7 +79,7 @@ function install_zdir(){
 		read -p "请设置文件管理器密码:" zdir_pass
 	done
 	#设置密码
-	sed -i "s/\"xiaoz.me\"/\"${zdir_pass}\"/g" ${zdir_path}/config.php
+	sed -i "s/\"xiaoz.me\"/\"${zdir_pass}\"/g" ${zdir_path}/zdir/config.php
 	#设置用户组权限
 	chown -R www:www $zdir_path
 }
