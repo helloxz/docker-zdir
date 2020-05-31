@@ -105,8 +105,8 @@ function zdir_run(){
 	docker run --name="zdir"  \
     -d -p 1080:80 --restart=always \
     -v ${zdir_path}:/data/wwwroot/default \
-    helloz/caddy-php:v1.3 \
-    /usr/sbin/start.sh
+    helloz/zdir:v1.0 \
+    /usr/sbin/run.sh
     #获取ip
 	osip=$(curl -4s https://api.ip.sb/ip)
     echo '-------------------------------------------'
