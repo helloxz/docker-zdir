@@ -67,9 +67,9 @@ function install_zdir(){
 	mv zdir-master zdir
 	rm -rf zdir-master
 	#重命名配置文件
-	mv zdir/config.simple.php zdir/config.php
+	cp ${zdir_path}/zdir/config.simple.php ${zdir_path}/zdir/config.php
 	#设置读取的路径
-	sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
+	sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" ${zdir_path}/zdir/config.php
 	echo '-------------------------------------------'
 	#设置文件管理器密码
 	read -p "请设置文件管理器密码:" zdir_pass
