@@ -24,6 +24,7 @@ mv /etc/php7/php-fpm.d/www.conf /etc/php7/php-fpm.d/www.conf.bak
 mv /etc/php7/php.ini /etc/php7/php.ini.bak
 #更名nginx配置文件
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.bak
 
 #启动脚本赋予权限
 chmod +x /usr/sbin/run.sh
