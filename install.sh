@@ -12,7 +12,8 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 date
 #为了精简镜像，可以将tzdata删除了
 apk del tzdata
-
+#安装unzip
+apk add unzip
 #安装nginx
 apk add nginx
 #安装PHP
