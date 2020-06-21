@@ -28,6 +28,7 @@ function install_zdir(){
 		
 		#设置用户组权限
 		chown -R www:www $zdir_path
+		rm -rf zdir.zip
 	fi
 	
 }
