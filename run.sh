@@ -24,7 +24,7 @@ function install_zdir(){
 		#重命名配置文件
 		cp ${zdir_path}/zdir/config.simple.php ${zdir_path}/zdir/config.php
 		#设置读取的路径
-		sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" ${zdir_path}/zdir/config.php
+		#sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" ${zdir_path}/zdir/config.php
 		echo '-------------------------------------------'
 		
 		#设置用户组权限
