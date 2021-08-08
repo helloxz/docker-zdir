@@ -36,6 +36,9 @@ mkdir -p /data/wwwroot/default
 addgroup -S www && adduser -S www -G www
 chown -R www:www /data/wwwroot/default/
 
+#下载zdir
+wget -O /tmp/zdir.zip https://github.com/helloxz/zdir/archive/refs/heads/master.zip
+
 #替换路径
 #sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
 

@@ -14,12 +14,13 @@ function install_zdir(){
 		#创建目录
 		mkdir -p $zdir_path
 		#下载源码
-		wget -O ${zdir_path}/zdir.zip ${zdir_url}
+		#wget -O ${zdir_path}/zdir.zip ${zdir_url}
 		#进入目录
-		cd $zdir_path
-		unzip -o zdir.zip
-		mv zdir-master zdir
-		rm -rf zdir-master
+		#cd $zdir_path
+		#unzip -o zdir.zip
+		cd /tmp && unzip -o zdir.zip
+		mv zdir-master ${zdir_path}/zdir
+		
 		#重命名配置文件
 		cp ${zdir_path}/zdir/config.simple.php ${zdir_path}/zdir/config.php
 		#设置读取的路径
@@ -28,7 +29,7 @@ function install_zdir(){
 		
 		#设置用户组权限
 		chown -R www:www $zdir_path
-		rm -rf zdir.zip
+		#rm -rf zdir.zip
 	fi
 	
 }

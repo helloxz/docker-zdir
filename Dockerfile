@@ -14,3 +14,4 @@ COPY ./php.ini /etc/php7/
 COPY ./www.conf /etc/php7/php-fpm.d/
 VOLUME /data/wwwroot/default
 EXPOSE 80
+CMD ["/usr/sbin/run.sh"]
